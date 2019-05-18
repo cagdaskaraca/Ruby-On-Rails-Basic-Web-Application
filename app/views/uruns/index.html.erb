@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Uruns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Satici</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uruns.each do |urun| %>
+      <tr>
+        <td><%= urun.satici %></td>
+        <td><%= link_to 'Show', urun %></td>
+        <td><%= link_to 'Edit', edit_urun_path(urun) %></td>
+        <td><%= link_to 'Destroy', urun, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Urun', new_urun_path %>

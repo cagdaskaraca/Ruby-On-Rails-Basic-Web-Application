@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :uruns,:path=>"ürünler"
     root "alimsatims#index"
   resources :alimsatims, :path=>"alimsatim"
 
