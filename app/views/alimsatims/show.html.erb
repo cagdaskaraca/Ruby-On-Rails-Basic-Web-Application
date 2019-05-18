@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Resim:</strong>
+  <%= image_tag @alimsatim.resim.url(:medium) if @alimsatim.resim? %>
+</p>
+
+<p>
+  <strong>Urunadi:</strong>
+  <%= @alimsatim.urunadi %>
+</p>
+
+<p>
+  <strong>Bilgiler:</strong>
+  <%= @alimsatim.bilgiler %>
+</p>
+
+<p>
+  <strong>Fiyat:</strong>
+  <%= @alimsatim.fiyat %>
+</p>
+
+<%= link_to 'Edit', edit_alimsatim_path(@alimsatim) %> |
+<%= link_to 'Back', alimsatims_path %>

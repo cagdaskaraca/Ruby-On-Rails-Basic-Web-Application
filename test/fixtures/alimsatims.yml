@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  urunadi: MyString
+  bilgiler: MyText
+  fiyat: 1
+
+two:
+  urunadi: MyString
+  bilgiler: MyText
+  fiyat: 1

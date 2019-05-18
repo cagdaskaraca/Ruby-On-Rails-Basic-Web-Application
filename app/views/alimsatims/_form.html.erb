@@ -1,0 +1,37 @@
+<%= form_with(model: alimsatim, local: true) do |form| %>
+  <% if alimsatim.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alimsatim.errors.count, "error") %> prohibited this alimsatim from being saved:</h2>
+
+      <ul>
+      <% alimsatim.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+ <%= form.label :resim %>
+ <%= form.file_field :resim %>
+</div>
+
+  <div class="field">
+    <%= form.label :urunadi %>
+    <%= form.text_field :urunadi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bilgiler %>
+    <%= form.text_area :bilgiler %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fiyat %>
+    <%= form.number_field :fiyat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

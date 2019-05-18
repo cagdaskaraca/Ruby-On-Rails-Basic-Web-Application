@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<h1>Alım Satım</h1>
+ <% @alimsatims.each do |alimsatim| %>
+ <div class="container-fluid">
+     <div class="container">
+     <div class="row">
+         <div class="col-md-9 col-sm-1" >
+             <div class="card">
+                 <div class="card-body">
+                 <div class="product-grid3">
+                    <div class="product-image3">
+
+                     <a href="#">
+                        <%= image_tag alimsatim.resim.url(:thumb) if alimsatim.resim? %> </a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                </div>
+                <div class="product-content">
+<%= alimsatim.urunadi %>
+                    <div class="price">
+                        <%= alimsatim.fiyat %>                        
+                    </div>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+</div>
+</div>
+<% end %>
+
+ 
